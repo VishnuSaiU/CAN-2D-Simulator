@@ -1,21 +1,35 @@
-# THE CAN (2D) – Minimal Simulation
+# CAN-2D: Content Addressable Network Simulator
 
-A simple 2D Content Addressable Network (CAN) model built for an operating systems homework. The program models a CAN overlay, supports node join/leave, performs content lookups, and provides an ASCII visualization.
+A minimal 2-dimensional simulation of a **Content Addressable Network (CAN)** written in Python.  
+This project models a distributed hash space where nodes own rectangular regions in a Cartesian coordinate grid.  
+Users can add or delete nodes, insert key-value pairs, and perform lookups to locate which node stores a given key.
 
-## Features (Assignment Checklist)
+---
 
-- **Model CAN that returns the address of the content**
-  - `GET` prints the hashed coordinate `(x, y)`, the routing `path`, and the final **owner node** (the address of the content).
-- **Starts with a single node** covering `[0,1) × [0,1)`.
-- **Add / Delete nodes**
-  - **Add**: picks a random point, routes to the current owner, splits that owner’s zone along the longer side at that point, and migrates keys.
-  - **Delete**: merges a node with a neighbor when their union is a perfect rectangle; keys move to the survivor.
-- **Interactive, intuitive menu** (numbered actions).
-- **Visual ASCII display** of the CAN space.
-- **Self-report** status & known limits.
-- **Text result for lookups** is printed.
+## 🧩 Overview
 
-## Run
+Each node manages a rectangular portion of the `[0,1) × [0,1)` space.  
+When a new node joins, the current owner of a random coordinate splits its zone and transfers the relevant data.  
+Lookups hash the key to a coordinate, then route greedily through neighboring nodes until reaching the owner.
+
+This simulation focuses on the **administrative structure and routing behavior** of CAN rather than real network transport.
+
+---
+
+## 🚀 Features
+
+- Start with a single node and expand dynamically  
+- Randomized node addition with zone splitting  
+- Safe node deletion with rectangular merge  
+- Greedy routing for key lookup  
+- ASCII-based visualization of the CAN grid  
+- Textual lookup output showing hashed coordinate, routing path, and owner node  
+- Interactive command-line menu for experimentation  
+- Self-report function summarizing system state and limitations  
+
+---
+
+## 🖥️ Usage
 
 ```bash
 python can.py
