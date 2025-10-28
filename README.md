@@ -37,7 +37,7 @@ python CAN.py
 ---
 
 ## Menu options:
-
+```
 [1] Add node (random point)
 [2] Delete node (by ID)
 [3] PUT key=value
@@ -45,7 +45,7 @@ python CAN.py
 [5] Show ASCII map
 [6] Report status
 [7] Quit
-
+```
 ---
 
 ## Example session:
@@ -70,6 +70,6 @@ MIT License — free to use and modify for educational or personal research purp
 
 
 ## 👤 Author
-Vishnu Sai Uppu
-Master’s in Computer Science | University of Memphis
+Vishnu Sai Uppu  
+Master’s in Computer Science | University of Memphis  
 [GitHub Profile](https://github.com/VishnuSaiU)
