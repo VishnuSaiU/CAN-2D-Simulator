@@ -33,6 +33,7 @@ This simulation focuses on the **administrative structure and routing behavior**
 
 ```bash
 python CAN.py
+```
 
 Menu options:
 [1] Add node (random point)
