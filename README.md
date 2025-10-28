@@ -34,9 +34,10 @@ This simulation focuses on the **administrative structure and routing behavior**
 ```bash
 python CAN.py
 ```
+---
 
-Menu options:
-```
+## Menu options:
+
 [1] Add node (random point)
 [2] Delete node (by ID)
 [3] PUT key=value
@@ -44,28 +45,31 @@ Menu options:
 [5] Show ASCII map
 [6] Report status
 [7] Quit
-```
-Example session:
+
+---
+
+## Example session:
 ```
 PUT "alpha" at (0.312,0.528) → owner N03
 GET "alpha" → (0.312,0.528) | path: ['N01', 'N03'] | owner: N03
 Result: hello
 ```
+---
 
-🧠 Technical Notes
-```
-Implemented in pure Python 3 (no external libraries)
-Neighbor rebuilding: O(N²) — acceptable for small networks
-Zone representation: tuples (xmin, xmax, ymin, ymax)
-Lookup coordinates derived from SHA-256 hash → normalized to [0,1)
-```
+## 🧠 Technical Notes
 
-🪪 License
-```
+- Implemented in pure Python 3 (no external libraries)
+- Neighbor rebuilding: O(N²) — acceptable for small networks
+- Zone representation: tuples (xmin, xmax, ymin, ymax)
+- Lookup coordinates derived from SHA-256 hash → normalized to [0,1)
+
+
+## 🪪 License
+
 MIT License — free to use and modify for educational or personal research purposes.
-```
 
-##👤 Author
+
+## 👤 Author
 Vishnu Sai Uppu
 Master’s in Computer Science | University of Memphis
 [GitHub Profile](https://github.com/VishnuSaiU)
